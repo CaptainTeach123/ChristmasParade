@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Candy Cane Lane | Garden City Christmas Parade</title>
+  <meta name="description" content="Stroll down Candy Cane Lane at the Garden City, Kansas Christmas Parade. Hosted by Downtown Vision and sponsored by Commerce Bank.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Pacifico&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍬</text></svg>">
+</head>
+<body>
+  <a class="skip-link" href="#details">Skip to content</a>
+  <canvas id="snow" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="stripe stripe-top" aria-hidden="true"></div>
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#top">
+        <span class="brand-icon" aria-hidden="true">🍭</span>
+        <span class="brand-text">Candy Cane Lane</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="#details">Details</a></li>
+        <li><a href="#route">Route</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#enter">Enter a Float</a></li>
+        <li><a href="#sponsors">Sponsors</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-swirl" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Downtown Vision presents</p>
+        <h1 class="hero-title">
+          <span class="line-1">Garden City</span>
+          <span class="line-2">Christmas Parade</span>
+        </h1>
+        <p class="hero-sub">
+          <span class="script">Welcome to</span>
+          <span class="candy-text">Candy Cane Lane</span>
+        </p>
+        <p class="hero-tagline">Twinkling lights, peppermint dreams, and a whole lot of holiday cheer marching straight down Main Street.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#enter">Enter Your Float</a>
+          <a class="btn btn-ghost" href="#details">Parade Details</a>
+        </div>
+        <p class="sponsor-line">Presented by <strong>Commerce Bank</strong> &middot; Hosted by <strong>Downtown Vision</strong></p>
+      </div>
+
+      <div class="countdown" aria-live="polite">
+        <p class="countdown-label">The parade steps off in</p>
+        <div class="countdown-grid">
+          <div class="count-box"><span id="cd-days">--</span><small>days</small></div>
+          <div class="count-box"><span id="cd-hours">--</span><small>hours</small></div>
+          <div class="count-box"><span id="cd-mins">--</span><small>minutes</small></div>
+          <div class="count-box"><span id="cd-secs">--</span><small>seconds</small></div>
+        </div>
+      </div>
+
+      <div class="candy-canes" aria-hidden="true">
+        <span class="cane cane-1"></span>
+        <span class="cane cane-2"></span>
+        <span class="cane cane-3"></span>
+      </div>
+    </section>
+
+    <div class="stripe-divider" aria-hidden="true"></div>
+
+    <!-- DETAILS -->
+    <section id="details" class="section details">
+      <div class="container">
+        <h2 class="section-title"><span class="title-icon">🎄</span> Parade Details</h2>
+        <p class="section-intro">Bundle up, grab a cup of cocoa, and join us downtown for Garden City's sweetest night of the year.</p>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-icon">📅</div>
+            <h3>When</h3>
+            <p><strong>Saturday, December 5, 2026</strong></p>
+            <p>Parade steps off at <strong>6:00 PM</strong></p>
+            <p class="muted">Pre-parade festivities begin at 4:00 PM</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">📍</div>
+            <h3>Where</h3>
+            <p><strong>Historic Downtown Garden City</strong></p>
+            <p>Along Main Street</p>
+            <p class="muted">Garden City, Kansas</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🎟️</div>
+            <h3>Cost</h3>
+            <p><strong>Free for everyone!</strong></p>
+            <p>Bring the whole family</p>
+            <p class="muted">Lawn chairs and blankets welcome</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🎅</div>
+            <h3>Special Guest</h3>
+            <p><strong>Santa Claus himself</strong></p>
+            <p>Riding the grand finale float</p>
+            <p class="muted">Mrs. Claus and the elves too!</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROUTE -->
+    <section id="route" class="section route">
+      <div class="container">
+        <h2 class="section-title"><span class="title-icon">🗺️</span> The Parade Route</h2>
+        <p class="section-intro">Follow the peppermint path! The parade winds through Historic Downtown Garden City along Main Street.</p>
+        <div class="route-wrap">
+          <div class="route-map" aria-label="Illustrated parade route map">
+            <svg viewBox="0 0 800 420" role="img" aria-labelledby="route-title">
+              <title id="route-title">Parade route along Main Street through downtown Garden City</title>
+              <defs>
+                <pattern id="canePattern" patternUnits="userSpaceOnUse" width="40" height="40" patternTransform="rotate(45)">
+                  <rect width="20" height="40" fill="#e63946"/>
+                  <rect x="20" width="20" height="40" fill="#ffffff"/>
+                </pattern>
+                <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0b2545" flood-opacity="0.25"/>
+                </filter>
+              </defs>
+              <rect width="800" height="420" rx="24" fill="#f4f9fb"/>
+              <!-- street grid -->
+              <g stroke="#cfe3ee" stroke-width="6" stroke-linecap="round">
+                <line x1="60" y1="120" x2="740" y2="120"/>
+                <line x1="60" y1="300" x2="740" y2="300"/>
+                <line x1="150" y1="60" x2="150" y2="360"/>
+                <line x1="300" y1="60" x2="300" y2="360"/>
+                <line x1="450" y1="60" x2="450" y2="360"/>
+                <line x1="600" y1="60" x2="600" y2="360"/>
+              </g>
+              <!-- Main Street parade path -->
+              <path d="M 80 210 L 720 210" stroke="#ffffff" stroke-width="34" stroke-linecap="round" filter="url(#shadow)"/>
+              <path d="M 80 210 L 720 210" stroke="url(#canePattern)" stroke-width="26" stroke-linecap="round" class="route-path"/>
+              <!-- Labels -->
+              <text x="400" y="180" text-anchor="middle" class="map-label">Main Street</text>
+              <text x="150" y="50" text-anchor="middle" class="map-label small">Kansas Ave</text>
+              <text x="300" y="50" text-anchor="middle" class="map-label small">Chestnut St</text>
+              <text x="450" y="50" text-anchor="middle" class="map-label small">Pine St</text>
+              <text x="600" y="50" text-anchor="middle" class="map-label small">Laurel St</text>
+              <!-- Start -->
+              <g transform="translate(80 210)">
+                <circle r="26" fill="#2a9d8f" stroke="#fff" stroke-width="5"/>
+                <text y="8" text-anchor="middle" font-size="24">🎺</text>
+                <text y="60" text-anchor="middle" class="map-label">Step Off</text>
+              </g>
+              <!-- Finish -->
+              <g transform="translate(720 210)">
+                <circle r="26" fill="#e63946" stroke="#fff" stroke-width="5"/>
+                <text y="8" text-anchor="middle" font-size="24">🎅</text>
+                <text y="60" text-anchor="middle" class="map-label">Finale</text>
+              </g>
+              <!-- Points of interest -->
+              <g class="poi">
+                <text x="300" y="260" text-anchor="middle" font-size="26">☕</text>
+                <text x="300" y="285" text-anchor="middle" class="map-label tiny">Cocoa Stop</text>
+                <text x="450" y="260" text-anchor="middle" font-size="26">🎤</text>
+                <text x="450" y="285" text-anchor="middle" class="map-label tiny">Announcer Stand</text>
+                <text x="600" y="260" text-anchor="middle" font-size="26">🎄</text>
+                <text x="600" y="285" text-anchor="middle" class="map-label tiny">Tree Lighting</text>
+              </g>
+              <!-- Direction arrow -->
+              <g class="float-marker">
+                <text font-size="30" text-anchor="middle">🛷</text>
+              </g>
+            </svg>
+          </div>
+          <div class="route-notes">
+            <h3>Good to know</h3>
+            <ul class="check-list">
+              <li>Main Street closes to traffic at <strong>5:00 PM</strong>. Plan to arrive early and park on side streets.</li>
+              <li>The best viewing spots are along Main Street between Kansas Avenue and Laurel Street.</li>
+              <li>Watch for the <strong>Cocoa Stop</strong> for free hot chocolate while supplies last.</li>
+              <li>Stick around after the finale for the <strong>Community Tree Lighting</strong> downtown.</li>
+              <li>Accessible viewing areas are available. Look for the volunteers in candy cane vests!</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stripe-divider" aria-hidden="true"></div>
+
+    <!-- SCHEDULE -->
+    <section id="schedule" class="section schedule">
+      <div class="container">
+        <h2 class="section-title"><span class="title-icon">⏰</span> Evening Schedule</h2>
+        <p class="section-intro">A full evening of sugar-plum fun, from the first jingle to the final glow.</p>
+        <ol class="timeline">
+          <li class="timeline-item">
+            <span class="time">4:00 PM</span>
+            <div class="timeline-body">
+              <h3>Candy Cane Lane Opens</h3>
+              <p>Downtown vendors, hot cocoa, and holiday music kick off the fun. Visit with Santa's elves and pick up your free candy cane.</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <span class="time">4:30 PM</span>
+            <div class="timeline-body">
+              <h3>Float Line-Up</h3>
+              <p>Parade entries assemble at the staging area. Judges make their rounds for the float awards.</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <span class="time">5:30 PM</span>
+            <div class="timeline-body">
+              <h3>Caroling on the Corner</h3>
+              <p>Local school choirs warm up the crowd with holiday favorites near the announcer stand.</p>
+            </div>
+          </li>
+          <li class="timeline-item highlight">
+            <span class="time">6:00 PM</span>
+            <div class="timeline-body">
+              <h3>Parade Steps Off!</h3>
+              <p>Lights, floats, marching bands, dancers, classic cars, and more roll down Main Street.</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <span class="time">7:15 PM</span>
+            <div class="timeline-body">
+              <h3>Santa's Grand Finale</h3>
+              <p>Santa and Mrs. Claus close out the parade on the sleigh float, followed by the Community Tree Lighting.</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <span class="time">7:30 PM</span>
+            <div class="timeline-body">
+              <h3>Float Awards</h3>
+              <p>Awards announced for Best in Show, Most Whimsical, Best Lights, and the Peppermint People's Choice.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ENTER A FLOAT -->
+    <section id="enter" class="section enter">
+      <div class="container">
+        <div class="enter-grid">
+          <div class="enter-copy">
+            <h2 class="section-title"><span class="title-icon">🎁</span> Enter a Float</h2>
+            <p class="section-intro left">Businesses, churches, schools, clubs, and families are all invited to join the parade. This year's theme is <strong>Candy Cane Lane</strong>, so think peppermint stripes, gumdrop glow, and gingerbread charm!</p>
+            <ul class="check-list">
+              <li>Entries are <strong>free</strong> for non-profits and <strong>$25</strong> for businesses.</li>
+              <li>All entries must be decorated with lights. The more, the merrier!</li>
+              <li>Floats, walking groups, bands, horses, and vintage vehicles are all welcome.</li>
+              <li>Only Santa rides the finale float. Please leave your Santa suit at home.</li>
+              <li>Registration closes <strong>Friday, November 27, 2026</strong>.</li>
+            </ul>
+            <div class="award-badges" aria-label="Float award categories">
+              <span class="badge">🏆 Best in Show</span>
+              <span class="badge">🍭 Most Whimsical</span>
+              <span class="badge">✨ Best Lights</span>
+              <span class="badge">❤️ People's Choice</span>
+            </div>
+          </div>
+          <form class="entry-form" id="entry-form" novalidate>
+            <h3>Parade Entry Form</h3>
+            <p class="form-note">Fill this out and we'll be in touch with line-up details.</p>
+            <div class="field">
+              <label for="org">Organization or family name</label>
+              <input id="org" name="org" type="text" required autocomplete="organization" placeholder="Sugar Plum Bakery">
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="contact">Contact name</label>
+                <input id="contact" name="contact" type="text" required autocomplete="name" placeholder="Holly Jolly">
+              </div>
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="(620) 555-0123">
+              </div>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+            </div>
+            <div class="field">
+              <label for="type">Entry type</label>
+              <select id="type" name="type" required>
+                <option value="">Choose one...</option>
+                <option>Float</option>
+                <option>Walking group</option>
+                <option>Marching band</option>
+                <option>Vehicle or classic car</option>
+                <option>Horses or animals</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="desc">Tell us about your entry</label>
+              <textarea id="desc" name="desc" rows="3" placeholder="A gingerbread house float with 2,000 twinkle lights and a live band!"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Sign Us Up! 🍬</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="stripe-divider" aria-hidden="true"></div>
+
+    <!-- SPONSORS -->
+    <section id="sponsors" class="section sponsors">
+      <div class="container">
+        <h2 class="section-title"><span class="title-icon">💝</span> Our Sponsors</h2>
+        <p class="section-intro">Candy Cane Lane is made possible by the generosity of our community partners.</p>
+        <div class="sponsor-grid">
+          <article class="sponsor-card presenting">
+            <span class="sponsor-tier">Presenting Sponsor</span>
+            <h3 class="sponsor-name">Commerce Bank</h3>
+            <p>Thank you to Commerce Bank for making the magic of Candy Cane Lane possible for families across Garden City.</p>
+          </article>
+          <article class="sponsor-card host">
+            <span class="sponsor-tier">Parade Host</span>
+            <h3 class="sponsor-name">Downtown Vision</h3>
+            <p>Downtown Vision brings Garden City together year-round to celebrate and strengthen our historic downtown.</p>
+          </article>
+        </div>
+        <div class="sponsor-cta">
+          <h3>Want to sponsor the parade?</h3>
+          <p>Sponsorship packages are available for businesses of every size. Help light up Main Street!</p>
+          <a class="btn btn-secondary" href="mailto:info@downtownvision.example?subject=Christmas%20Parade%20Sponsorship">Become a Sponsor</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section faq">
+      <div class="container narrow">
+        <h2 class="section-title"><span class="title-icon">❓</span> Frequently Asked Questions</h2>
+        <div class="accordion">
+          <details>
+            <summary>What if the weather is bad?</summary>
+            <p>The parade goes on in light snow or cold (it's Christmas in Kansas, after all!). In the case of severe weather, updates will be posted on Downtown Vision's social media pages by 2:00 PM on parade day.</p>
+          </details>
+          <details>
+            <summary>Where should I park?</summary>
+            <p>Main Street closes at 5:00 PM. Free parking is available on side streets and in the public lots east and west of Main Street. Please leave the parade route clear for floats and emergency vehicles.</p>
+          </details>
+          <details>
+            <summary>Can floats throw candy?</summary>
+            <p>Yes! Walkers may hand candy to spectators along the curb. For safety, please do not throw candy from moving vehicles, and remind kids to stay behind the curb.</p>
+          </details>
+          <details>
+            <summary>Are pets allowed?</summary>
+            <p>Leashed, well-behaved pets are welcome to watch the parade. Please keep them clear of horses and marching bands, and bundle them up if it's chilly.</p>
+          </details>
+          <details>
+            <summary>How can I volunteer?</summary>
+            <p>We need elves! Volunteers help with line-up, crowd guidance, and the Cocoa Stop. Reach out to Downtown Vision to sign up for a candy cane vest.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="stripe stripe-bottom" aria-hidden="true"></div>
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">🍭 Candy Cane Lane</p>
+        <p>Garden City Christmas Parade<br>Historic Downtown Garden City, Kansas</p>
+      </div>
+      <div>
+        <p class="footer-heading">Hosted by</p>
+        <p>Downtown Vision</p>
+        <p class="footer-heading">Presented by</p>
+        <p>Commerce Bank</p>
+      </div>
+      <div>
+        <p class="footer-heading">Get in touch</p>
+        <p><a href="mailto:info@downtownvision.example">info@downtownvision.example</a></p>
+        <p>Garden City, KS 67846</p>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; <span id="year"></span> Downtown Vision. Made with peppermint and cheer. 🎄</p>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">🎈</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
